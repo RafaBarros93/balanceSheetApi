@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
 
         const balance = await Balance.create({company});
         
-        var cont =1;
+        var cont = 1;
             
         await Promise.all(balanceSheets.map(async sheets => {
 
