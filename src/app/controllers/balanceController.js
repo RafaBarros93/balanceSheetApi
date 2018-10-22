@@ -23,15 +23,16 @@ router.post('/', async (req, res) => {
         const {company,balanceSheets} = req.body;
 
         const balance = await Balance.create({company});
-
-
+        
+        var cont =1;
+            
         await Promise.all(balanceSheets.map(async sheets => {
 
             const balanceSheet = new BalanceSheet({ ...sheets,balance: balance._id });
-
-            console.log(balanceSheet);
-
-            balanceSheet.i ++;
+            
+            balanceSheet.i = cont++;
+           
+            console.log(balanceSheet.i);
 
             await balanceSheet.save();
 

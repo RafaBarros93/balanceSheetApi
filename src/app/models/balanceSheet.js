@@ -5,7 +5,7 @@ const BalanceSheetSchema = new mongosse.Schema({
     i: {
         type: Number,
         require: true,
-        sequence_value: 1
+        
 
     },
     classification: {
