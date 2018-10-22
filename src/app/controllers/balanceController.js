@@ -7,7 +7,7 @@ const BalanceSheet = require('../models/balanceSheet');
 
 
 
-router.get('/', async (req, res) => {
+router.get('/balances', async (req, res) => {
     try {
         const balance = await Balance.find().populate(['company', 'balanceSheets']);
 
