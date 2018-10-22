@@ -45,7 +45,7 @@ router.post('/', async (req, res) => {
             
             balanceSheet.i = cont++;
            
-            console.log(balanceSheet.i);
+           
 
             await balanceSheet.save();
 
