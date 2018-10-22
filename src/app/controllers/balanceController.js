@@ -90,7 +90,7 @@ router.put('/:balanceId', async (req, res) => {
         return res.status(200).send({balance});
     } catch (err) {
         console.log(err);
-        return res.status(400).send({error: 'Error creating new balance'});
+        return res.status(400).send({error: 'Error updating balance'});
     }
 });
 
@@ -102,7 +102,7 @@ router.delete('/:balanceId', async (req, res) => {
         return res.status(200).send({message: 'Remove balance successfully'});
     } catch (err) {
         console.log(err);
-        return res.status(400).send({error: 'Error deleting new project'});
+        return res.status(400).send({error: 'Error deleting balance'});
     }
 });
 
