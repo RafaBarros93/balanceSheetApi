@@ -4,41 +4,41 @@ const BalanceSheetSchema = new mongosse.Schema({
 
     i: {
         type: Number,
-        require: true,
+        required: true,
         
 
     },
     classification: {
         type: String,
-        require: true
+        required: true
     },
     description_nd: {
         type: String,
-        require: true
+        required: true
 
     },
 
     initialCash: {
         type: String,
-        require: true
+        required: true
     },
     debit: {
         type: String,
-        require: true
+        required: true
     },
 
     credit: {
         type: String,
-        require: true
+        required: true
     },
     finalCash: {
         type: String,
-        require: true
+        required: true
     },
     balance:{
         type: mongosse.Schema.Types.ObjectId,
         ref: 'Balance',
-        require: true,
+        required: true,
     }
 
 

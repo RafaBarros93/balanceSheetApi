@@ -3,11 +3,11 @@ const mongosse = require('../database');
 const CompanySchema = new mongosse.Schema({
     nameComapany: {
         type: String,
-        require: true
+        required: true
     },
     info: {
         type: String,
-        require: true
+        required: true
     },
     
 })

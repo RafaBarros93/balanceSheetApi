@@ -4,7 +4,7 @@ const BalanceSchema = new mongosse.Schema({
     company: {
         type: mongosse.Schema.Types.ObjectId,
         ref: 'Company',
-        require: true,
+        required: true,
     },
     date: {
         type: Date,
@@ -14,7 +14,7 @@ const BalanceSchema = new mongosse.Schema({
     balanceSheets: [{
         type: mongosse.Schema.Types.ObjectId,
         ref: 'BalanceSheet',
-        require: true,
+        required: true,
 
     }]
 });
