@@ -29,8 +29,13 @@ router.post('/', async (req, res) => {
 
             const balanceSheet = new BalanceSheet({ ...sheets,balance: balance._id });
 
+            console.log(balanceSheet);
+
+            balanceSheet.i ++;
+
             await balanceSheet.save();
 
+        
             balance.balanceSheets.push(balanceSheet);
         }));
 

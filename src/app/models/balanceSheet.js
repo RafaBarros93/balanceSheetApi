@@ -3,7 +3,7 @@ const mongosse = require('../database');
 const BalanceSheetSchema = new mongosse.Schema({
 
     i: {
-        type: String,
+        type: Number,
         require: true,
         sequence_value: 1
 

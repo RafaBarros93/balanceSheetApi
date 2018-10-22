@@ -15,7 +15,6 @@ Then,to run
 
 ```bash
 $ npm start
-$
 ```
 
 
