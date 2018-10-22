@@ -18,6 +18,19 @@ router.get('/balances', async (req, res) => {
     }
 });
 
+router.get('/balances/:balanceId', async (req, res) => {
+    try {
+
+        const balance = await Balance.findById(req.params.balanceId).populate(['company', 'balanceSheets']);
+
+        return res.status(200).send({balance});
+    } catch (err) {
+        console.log(err);
+        return res.status(400).send({error: 'Error loading new balance'});
+    }
+});
+
+
 router.post('/', async (req, res) => {
     try {
         const {company,balanceSheets} = req.body;
